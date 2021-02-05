@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+function chk(){
+	
+sub1=parseInt(document.getElementById('s1').value);
+sub2=parseInt(document.getElementById('s2').value);
+sub3=parseInt(document.getElementById('s3').value);
+	
+t= sub1+sub2+sub3;
+a= t/3;
+p= (a*100)/50
+
+document.getElementById('t1').value=t;
+document.getElementById('a1').value=a;
+document.getElementById('p1').value=p;
+
+if(p>=80){
+	document.f1.g1.value="Grade A";}
+	
+if(p>=60 && p<80){
+	document.f1.g1.value="Grade B";}	
+	
+if(p>=40 && p<60){
+	document.f1.g1.value="Grade C";}	
+	
+if(p<40){
+	document.f1.g1.value="Grade D";}	
+	
+
+
+}
+
+</script>
+
+</head>
+
+<body background="dynamic-fluid-gradient-background-liquid-shape-composition_53295-284.jpg"  style=width: 900px;  "background-repeat: no-repeat;  background-attachment: fixed" >
+
+<h1 align="center"> Marksheet</h1>
+<pre>
+<form name="f1">
+
+Sub1: <input type="text" placeholder="mark 1" id="s1"  />
+
+Sub2: <input type="text" placeholder="mark 2" id="s2" />
+
+Sub3: <input type="text" placeholder="mark 3" id="s3" />
+
+<input type="button" value="ok" onclick="chk();" />
+
+Total:<input type="text" placeholder="Total marks" id="t1" />
+
+Avg:  <input type="text" placeholder="Average marks" id="a1" />
+
+Perc: <input type="text" placeholder="Percentage" id="p1" />
+
+Grd:  <input type="text" placeholder="Grade" id="g1" />
+
+</form>
+</pre>
+
+
+</body>
+</html>
